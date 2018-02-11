@@ -1,4 +1,4 @@
-package beans;
+package com.jjump.spring.core.beans;
 
 public class Client {
 

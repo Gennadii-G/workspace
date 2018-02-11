@@ -2,7 +2,6 @@ package com.jjump.spring.beans;
 
 import com.jjump.spring.core.beans.Client;
 import com.jjump.spring.core.beans.Event;
-import com.jjump.spring.core.loggers.ConsoleEventLogger;
 import com.jjump.spring.core.loggers.EventLogger;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -28,7 +27,7 @@ public class App {
     }
 
     public static void main(String[] args) {
-        ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("spring_old.xml");
         App app = context.getBean(App.class);
 
         Event event = context.getBean(Event.class);

@@ -9,5 +9,6 @@ public class Order {
     private int price;
     private Timer timer;
     private Consumer consumer;
+    private int timeAmount;
     private Date date;
 }

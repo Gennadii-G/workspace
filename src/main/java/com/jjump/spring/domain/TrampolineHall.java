@@ -1,9 +1,8 @@
-package com.jjump.spring.beans;
+package com.jjump.spring.domain;
 
 import java.util.List;
-import java.util.Set;
 
-public class TrampolineHall {
+public class TrampolineHall  extends DomainObject {
 
     private List<Order> orders;
     private List<Discount> discounts;
@@ -28,6 +27,10 @@ public class TrampolineHall {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getName() {
+        return name;
     }
 
     @Override

@@ -1,11 +1,13 @@
 package com.jjump.spring.CLI;
 
+import com.jjump.spring.adapter.console.TrampolineHallAdapter;
 import com.jjump.spring.inmemdb.DataHall;
 import com.jjump.spring.services.Shower;
 import org.springframework.context.ApplicationContext;
 import org.springframework.shell.core.CommandMarker;
 import org.springframework.shell.core.annotation.CliAvailabilityIndicator;
 import org.springframework.shell.core.annotation.CliCommand;
+import org.springframework.shell.core.annotation.CliOption;
 import org.springframework.stereotype.Component;
 
 
@@ -20,7 +22,12 @@ public class Commands implements CommandMarker {
 
     @CliCommand(value = "show")
     public String showAllHalls(){
-        return context.getBean(Shower.class).showAllHallsInfo();
+        return context.getBean(TrampolineHallAdapter.class).getAllHallsAsString();
+    }
+
+    @CliCommand(value = "showN")
+    public String showAllHallsByName(@CliOption(key="name", mandatory=false) String name){
+        return context.getBean(TrampolineHallAdapter.class).getHallbyName(name);
     }
 
     public static void setContext(ApplicationContext context) {

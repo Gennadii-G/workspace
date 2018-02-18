@@ -1,4 +1,4 @@
-package com.jjump.spring.beans;
+package com.jjump.spring.domain;
 
 public class Discount {
     private boolean isActualToday;

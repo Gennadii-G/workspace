@@ -1,32 +1,44 @@
-package com.jjump.spring.inmemdb;
+package com.jjump.spring.dao;
 
+
+import com.jjump.spring.abstr.layout.TrampolineHallService;
 import com.jjump.spring.domain.Trampoline;
 import com.jjump.spring.domain.TrampolineHall;
 import org.apache.commons.configuration.ConfigurationException;
 import org.apache.commons.configuration.PropertiesConfiguration;
 import org.springframework.stereotype.Component;
 
-//import javax.annotation.PostConstruct;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 @Component
-public class DataHall {
+public class TrampolineHallDao implements TrampolineHallService {
+
     private PropertiesConfiguration props;
-    private List<TrampolineHall> halls;
-    private List<Trampoline> tramps;
     private int hallsAmount;
     private int trampsAmount;
 
-    public DataHall() throws ConfigurationException {
+    public TrampolineHallDao() throws ConfigurationException {
         props = new PropertiesConfiguration("vata.properties");
-        init();
     }
 
-//    @PostConstruct
-    private void init(){
+    @Override
+    public Set<TrampolineHall> getAll() {
+        return selectAllTrampolineHall();
+    }
+
+    @Override
+    public Set<TrampolineHall> getByName(String name) {
+        return selectAllTrampolineHall().stream().filter(h -> h.getName().equals(name)).collect(Collectors.toSet());
+    }
+
+    //    @PostConstruct
+    private Set<TrampolineHall> selectAllTrampolineHall(){
         hallsAmount = props.getInt("halls.amount");
-        halls = new ArrayList<>();
+        Set<TrampolineHall> res = new HashSet<>();
 
         for(int i=1; i < hallsAmount+1; i++){
             trampsAmount = props.getInt(i + ".hall.trampoline.amount");
@@ -34,19 +46,16 @@ public class DataHall {
             tHall.setName(props.getString(i + ".hall.name"));
             tHall.setPrice(props.getInt(i + ".hall.price"));
             tHall.setTramlins(loadTrompalines());
-            halls.add(tHall);
+            res.add(tHall);
         }
+        return res;
     }
 
     private List<Trampoline> loadTrompalines(){
-        tramps = new ArrayList<>();
+            List<Trampoline> tramps = new ArrayList<>();
         while (tramps.size() < trampsAmount+1){
             tramps.add(new Trampoline());
         }
-       return tramps;
-    }
-
-    public List<TrampolineHall> getHalls() {
-        return halls;
+        return tramps;
     }
 }

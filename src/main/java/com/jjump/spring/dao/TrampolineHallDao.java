@@ -20,25 +20,27 @@ public class TrampolineHallDao implements TrampolineHallService {
     private PropertiesConfiguration props;
     private int hallsAmount;
     private int trampsAmount;
+    private Set<TrampolineHall> halls;
 
     public TrampolineHallDao() throws ConfigurationException {
         props = new PropertiesConfiguration("vata.properties");
+        init();
     }
 
     @Override
     public Set<TrampolineHall> getAll() {
-        return selectAllTrampolineHall();
+        return halls;
     }
 
     @Override
     public Set<TrampolineHall> getByName(String name) {
-        return selectAllTrampolineHall().stream().filter(h -> h.getName().equals(name)).collect(Collectors.toSet());
+        return halls.stream().filter(h -> h.getName().equals(name)).collect(Collectors.toSet());
     }
 
     //    @PostConstruct
-    private Set<TrampolineHall> selectAllTrampolineHall(){
+    private void init(){
         hallsAmount = props.getInt("halls.amount");
-        Set<TrampolineHall> res = new HashSet<>();
+        halls = new HashSet<>();
 
         for(int i=1; i < hallsAmount+1; i++){
             trampsAmount = props.getInt(i + ".hall.trampoline.amount");
@@ -46,15 +48,19 @@ public class TrampolineHallDao implements TrampolineHallService {
             tHall.setName(props.getString(i + ".hall.name"));
             tHall.setPrice(props.getInt(i + ".hall.price"));
             tHall.setTramlins(loadTrompalines());
-            res.add(tHall);
+            halls.add(tHall);
         }
-        return res;
     }
 
     private List<Trampoline> loadTrompalines(){
             List<Trampoline> tramps = new ArrayList<>();
         while (tramps.size() < trampsAmount+1){
-            tramps.add(new Trampoline());
+            Trampoline tramp = new Trampoline();
+            tramp.setId(tramps.size());
+            tramp.setBroken(false);
+            tramp.setOrdered(false);
+            tramps.add(new Trampoline(){
+            });
         }
         return tramps;
     }

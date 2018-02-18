@@ -1,6 +1,7 @@
 package com.jjump.spring.domain;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class TrampolineHall  extends DomainObject {
 
@@ -33,11 +34,26 @@ public class TrampolineHall  extends DomainObject {
         return name;
     }
 
+    public boolean orderTramp(){
+        List<Trampoline> tramlins = this.tramlins.stream().filter(t -> !t.isOrdered()).collect(Collectors.toList());
+        if(!tramlins.isEmpty()){
+            tramlins.get(0).setOrdered(true);
+            return true;
+        }else{
+            return false;
+        }
+    }
+
     @Override
     public String toString() {
         return "TrampolineHall: " +
-                name + ", tramps: " +
+                name + ", free tramps: " +
+                freeTramps() + " / " +
                 tramlins.size() + ", price:" +
                 price;
+    }
+
+    private long freeTramps(){
+        return tramlins.stream().filter(t -> !t.isOrdered()).count();
     }
 }

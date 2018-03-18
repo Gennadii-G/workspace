@@ -7,6 +7,7 @@ import com.jjump.spring.domain.TrampolineHall;
 import com.jjump.spring.domain.User;
 import com.jjump.spring.inmemdb.DataHall;
 import com.jjump.spring.services.Shower;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.shell.core.CommandMarker;
 import org.springframework.shell.core.annotation.CliAvailabilityIndicator;
@@ -81,6 +82,7 @@ public class Commands implements CommandMarker {
         return res.toString();
     }
 
+    @Autowired
     public static void setContext(ApplicationContext context) {
         Commands.context = context;
     }

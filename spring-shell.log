@@ -46,3 +46,7 @@ show-halls
 order --hall-name ogurez
 show-hall --name ogurez
 show-halls
+// Gennadii_B 1.1.0.RELEASE log opened at 2018-02-19 18:03:08
+// Gennadii_B 1.1.0.RELEASE log opened at 2018-02-19 18:04:14
+login --name Den
+show-halls

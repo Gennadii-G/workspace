@@ -12,12 +12,14 @@ C:\reps\workspace\src\main\java\other\testannot\Application.java
 C:\reps\workspace\src\main\java\com\jjump\spring\dao\TrampolineHallDao.java
 C:\reps\workspace\src\main\java\com\jjump\spring\domain\Contact.java
 C:\reps\workspace\src\main\java\com\jjump\spring\services\Shower.java
+C:\reps\workspace\src\main\java\com\jjump\spring\abstr\layout\UserService.java
 C:\reps\workspace\src\main\java\com\jjump\spring\CLI\MyPromptProvider.java
 C:\reps\workspace\src\main\java\com\jjump\spring\domain\Trampoline.java
 C:\reps\workspace\src\main\java\other\App.java
 C:\reps\workspace\src\main\java\other\core\beans\Client.java
 C:\reps\workspace\src\main\java\com\jjump\spring\domain\Order.java
 C:\reps\workspace\src\main\java\other\core\loggers\ConsoleEventLogger.java
+C:\reps\workspace\src\main\java\com\jjump\spring\dao\UserDao.java
 C:\reps\workspace\src\main\java\com\jjump\spring\inmemdb\DataHall.java
 C:\reps\workspace\src\main\java\com\jjump\spring\domain\TrampolineHall.java
 C:\reps\workspace\src\main\java\other\core\beans\Event.java

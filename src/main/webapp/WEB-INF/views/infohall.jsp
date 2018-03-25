@@ -22,17 +22,17 @@
     
     <!-- CSS
 	================================================== -->
-  	<link rel="stylesheet" href="/jh2/resources/css/zerogrid.css">
-	<link rel="stylesheet" href="/jh2/resources/css/style.css">
-	<link rel="stylesheet" href="/jh2/resources/css/lightbox.css">
+  	<link rel="stylesheet" href="/resources/css/zerogrid.css">
+	<link rel="stylesheet" href="/resources/css/style.css">
+	<link rel="stylesheet" href="/resources/css/lightbox.css">
 	
 	<!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 	
 	
-	<link rel="stylesheet" href="/jh2/resources/css/menu.css">
-	<script src="/jh2/resources/js/jquery1111.min.js" type="text/javascript"></script>
-	<script src="/jh2/resources/js/script.js"></script>
+	<link rel="stylesheet" href="/resources/css/menu.css">
+	<script src="/resources/js/jquery1111.min.js" type="text/javascript"></script>
+	<script src="/resources/js/script.js"></script>
 	
 	<!--[if lt IE 8]>
        <div style=' clear: both; text-align:center; position: relative;'>
@@ -42,8 +42,8 @@
       </div>
     <![endif]-->
     <!--[if lt IE 9]>
-		<script src="/jh2/resources/js/html5.js"></script>
-		<script src="/jh2/resources/js/css3-mediaqueries.js"></script>
+		<script src="/resources/js/html5.js"></script>
+		<script src="/resources/js/css3-mediaqueries.js"></script>
 	<![endif]-->
 	
 </head>
@@ -53,25 +53,31 @@
 		<div class="header">
 			<div id='cssmenu' >
 				<ul>
-				   <li><a href='index.html'><span>zAnimal</span></a></li>
-				   <li class=' has-sub'><a href='#'><span>Category</span></a>
+				   <li class="active"><a href="<c:url value="/" />"><span>JAMPHALL2</span></a></li>
+				   <li class=' has-sub'><a href='#'><span>наши залы</span></a>
 					  <ul>
-						 <li class='has-sub'><a href='#'><span>Item 1</span></a>
+						 <li class='has-sub'><a href="<c:url value="/infohall/ogurez" />"><span>Огурец</span></a>
 							<ul>
-							   <li><a href='#'><span>Sub Item</span></a></li>
-							   <li class='last'><a href='#'><span>Sub Item</span></a></li>
+							   <li><a href="<c:url value="/infohall/ogurez" />"><span>информация</span></a></li>
+							   <li class='last'><a href="<c:url value="/" />"><span>${greeting}</span></a></li>
 							</ul>
 						 </li>
-						 <li class='has-sub'><a href='#'><span>Item 2</span></a>
+						 <li class='has-sub'><a href="<c:url value="/infohall/vata" />"><span>Вата</span></a>
 							<ul>
-							   <li><a href='#'><span>Sub Item</span></a></li>
-							   <li class='last'><a href='#'><span>Sub Item</span></a></li>
+							   <li><a href="<c:url value="/infohall/oblako" />"><span>информация</span></a></li>
+							   <li class='last'><a href="<c:url value="/" />"><span>order</span></a></li>
 							</ul>
 						 </li>
+						 <li class='has-sub'><a href="<c:url value="/infohall/oblako" />"><span>Облако</span></a>
+                         	<ul>
+                         	    <li><a href="<c:url value="/infohall/oblako" />"><span>информация</span></a></li>
+                         		<li class='last'><a href="<c:url value="/" />"><span>orser</span></a></li>
+                         	</ul>
+                         </li>
 					  </ul>
 				   </li>
-				   <li class="active"><a href="<c:url value="/info" />"><span>About</span></a></li>
-				   <li class='last'><a href="<c:url value="/" />"<span>Contact</span></a></li>
+				   <li><a href="<c:url value="/info" />"><span>о нас</span></a></li>
+				   <li class='last'><a href="<c:url value="/contacts" />"><span>контакты</span></a></li>
 				</ul>
 			</div>
 		</div>
@@ -89,24 +95,18 @@
 					<div class="wrap-content">
 						<article>
 							<div class="art-header">
-								<h1 class="entry-title">The title on the article</h1>
+								<h1 class="entry-title">${id}</h1>
 							</div>
 							<div class="art-content">
 								
-								<div class="excerpt"><p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum exercitation ullamco laboris nisi ut aliquip.</p></div>
-								<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
-								<blockquote><p>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet vultatup duista.</p></blockquote>
-								<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril.</p>
-								<h2>Heading 1</h2>
-								<p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse lorem ipsum dolor sit amet.</p>
-								<h2>Heading 2</h2>
-								<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis. At vero eos et accusam et justo.</p>
-								<h2>Heading 3</h2>
-								<p>Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum hendrerit in vulputate velit esse molestie.</p>
-								<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
-								<p><code>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</code></p>
-								<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-								<div class="note">
+								<div class="excerpt"><p>Название зала: ${hall.name}</p></div>
+								<div class="excerpt"><p>Количество свободных батутов: ${hall.freeTramps()}</p></div>
+								<div class="excerpt"><p>Стоимоть часа аренды одного батута: ${hall.price}</p></div>
+
+								<br/>
+								<br/>
+								<br/>
+								<br/>
 								  <ol>
 									<li>Lorem ipsum</li>
 									<li>Sit amet vultatup nonumy</li>

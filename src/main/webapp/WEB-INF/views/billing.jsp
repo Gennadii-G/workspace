@@ -85,18 +85,10 @@
 		<!--////////////////////////////////////Container-->
 		<section id="container">
 			<div class="wrap-container">
-				<div class="crumbs">
-					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="contact.html">Contact</a></li>
-					</ul>
-				</div>
 				<div class="zerogrid">
 					<div class="row">
 						<h1 class="t-center" style="margin: 40px 0;color: #212121;letter-spacing: 2px;font-weight: 500;">Contact Us</h1>
-						<div class="col-full">
-							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3164.289259162295!2d-120.7989351!3d37.5246781!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8091042b3386acd7%3A0x3b4a4cedc60363dd!2sMain+St%2C+Denair%2C+CA+95316%2C+Hoa+K%E1%BB%B3!5e0!3m2!1svi!2s!4v1434016649434" width="100%" height="450" frameborder="0" style="border:0"></iframe>
-						</div>
+
 						<div class="col-1-3">
 							<div class="wrap-col">
 								<h3 style="margin: 20px 0">Contact Info</h3>

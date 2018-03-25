@@ -23,10 +23,10 @@ public class TrampolineHallAdapter {
     }
 
     public String getHallbyName(String name){
-        StringBuffer res = new StringBuffer();
-        halls.getByName(name).stream().forEach( h -> {
-            res.append(h.toString() + "\n");
-        });
-        return res.toString();
+//        StringBuffer res = new StringBuffer();
+//        halls.getByName(name).stream().forEach( h -> {
+//            res.append(h.toString() + "\n");
+//        });
+        return "none";
     }
 }

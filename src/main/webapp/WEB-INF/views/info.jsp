@@ -51,29 +51,35 @@
 <body class="single-page">
 	<div class="wrap-body">
 		<div class="header">
-			<div id='cssmenu' >
-				<ul>
-				   <li><a href='index.html'><span>zAnimal</span></a></li>
-				   <li class=' has-sub'><a href='#'><span>Category</span></a>
-					  <ul>
-						 <li class='has-sub'><a href='#'><span>Item 1</span></a>
-							<ul>
-							   <li><a href='#'><span>Sub Item</span></a></li>
-							   <li class='last'><a href='#'><span>Sub Item</span></a></li>
-							</ul>
-						 </li>
-						 <li class='has-sub'><a href='#'><span>Item 2</span></a>
-							<ul>
-							   <li><a href='#'><span>Sub Item</span></a></li>
-							   <li class='last'><a href='#'><span>Sub Item</span></a></li>
-							</ul>
-						 </li>
-					  </ul>
-				   </li>
-				   <li class="active"><a href="<c:url value="/info" />"><span>About</span></a></li>
-				   <li class='last'><a href="<c:url value="/" />"<span>Contact</span></a></li>
-				</ul>
-			</div>
+						<div id='cssmenu' >
+            				<ul>
+            				   <li class="active"><a href="<c:url value="/" />"><span>JAMPHALL2</span></a></li>
+            				   <li class=' has-sub'><a href='#'><span>наши залы</span></a>
+            					  <ul>
+            						 <li class='has-sub'><a href="<c:url value="/infohall/ogurez" />"><span>Огурец</span></a>
+            							<ul>
+            							   <li><a href="<c:url value="/infohall/ogurez" />"><span>информация</span></a></li>
+            							   <li class='last'><a href="<c:url value="/" />"><span>${greeting}</span></a></li>
+            							</ul>
+            						 </li>
+            						 <li class='has-sub'><a href="<c:url value="/infohall/vata" />"><span>Вата</span></a>
+            							<ul>
+            							   <li><a href="<c:url value="/infohall/oblako" />"><span>информация</span></a></li>
+            							   <li class='last'><a href="<c:url value="/" />"><span>order</span></a></li>
+            							</ul>
+            						 </li>
+            						 <li class='has-sub'><a href="<c:url value="/infohall/oblako" />"><span>Облако</span></a>
+                                     	<ul>
+                                     	    <li><a href="<c:url value="/infohall/oblako" />"><span>информация</span></a></li>
+                                     		<li class='last'><a href="<c:url value="/" />"><span>orser</span></a></li>
+                                     	</ul>
+                                     </li>
+            					  </ul>
+            				   </li>
+            				   <li><a href="<c:url value="/info" />"><span>о нас</span></a></li>
+            				   <li class='last'><a href="<c:url value="/contacts" />"><span>контакты</span></a></li>
+            				</ul>
+            			</div>
 		</div>
 
 		<!--////////////////////////////////////Container-->

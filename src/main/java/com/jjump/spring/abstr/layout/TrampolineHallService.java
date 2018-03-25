@@ -9,5 +9,5 @@ public interface TrampolineHallService {
 
     public Set<TrampolineHall> getAll();
 
-    public Set<TrampolineHall> getByName(String name);
+    public TrampolineHall getByName(String name);
 }

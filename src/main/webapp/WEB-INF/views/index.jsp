@@ -56,28 +56,29 @@
 				   <li class="active"><a href="<c:url value="/" />"><span>JAMPHALL2</span></a></li>
 				   <li class=' has-sub'><a href='#'><span>наши залы</span></a>
 					  <ul>
-						 <li class='has-sub'><a href='#'><span>Огурец</span></a>
+						 <li class='has-sub'><a href="<c:url value="/infohall/ogurez" />"><span>Огурец</span></a>
 							<ul>
-							   <li><a href='#'><span>${greeting}</span></a></li>
-							   <li class='last'><a href='#'><span>${greeting}</span></a></li>
+							   <li><a href="<c:url value="/infohall/ogurez" />"><span>информация</span></a></li>
+							   <li class='last'><a href="<c:url value="/billing/ogurez" />"><span>записаться</span></a></li>
 							</ul>
 						 </li>
-						 <li class='has-sub'><a href='#'><span>Вата</span></a>
+						 <li class='has-sub'><a href="<c:url value="/infohall/vata" />"><span>Вата</span></a>
 							<ul>
-							   <li><a href='#'><span>Sub Item</span></a></li>
-							   <li class='last'><a href='#'><span>Sub Item</span></a></li>
+							   <li><a href="<c:url value="/infohall/oblako" />"><span>информация</span></a></li>
+							   <li class='last'><a href="<c:url value="/billing/oblako" />"><span>записаться</span></a></li>
 							</ul>
 						 </li>
-						 <li class='has-sub'><a href='#'><span>Облако</span></a>
+						 <li class='has-sub'><a href="<c:url value="/infohall/oblako" />"><span>Облако</span></a>
                          	<ul>
-                         	    <li><a href='#'><span>Sub Item</span></a></li>
-                         		<li class='last'><a href='#'><span>Sub Item</span></a></li>
+                         	    <li><a href="<c:url value="/infohall/oblako" />"><span>информация</span></a></li>
+                         		<li class='last'><a href="<c:url value="/billing/oblako" />"><span>записаться</span></a></li>
                          	</ul>
                          </li>
 					  </ul>
 				   </li>
 				   <li><a href="<c:url value="/info" />"><span>о нас</span></a></li>
-				   <li class='last'><a href="<c:url value="/contact" />"><span>контакты</span></a></li>
+				   <li class='last'><a href="<c:url value="/contacts" />"><span>контакты</span></a></li>
+				   <li><a href="<c:url value="/global-exception" />"><span>EX</span></a></li>
 				</ul>
 			</div>
 			<div class="custom-banner">

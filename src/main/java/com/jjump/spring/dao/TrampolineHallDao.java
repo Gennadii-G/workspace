@@ -6,7 +6,7 @@ import com.jjump.spring.domain.Trampoline;
 import com.jjump.spring.domain.TrampolineHall;
 import org.apache.commons.configuration.ConfigurationException;
 import org.apache.commons.configuration.PropertiesConfiguration;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-@Component
+@Repository
 public class TrampolineHallDao implements TrampolineHallService {
 
     private PropertiesConfiguration props;
@@ -33,8 +33,10 @@ public class TrampolineHallDao implements TrampolineHallService {
     }
 
     @Override
-    public Set<TrampolineHall> getByName(String name) {
-        return halls.stream().filter(h -> h.getName().equals(name)).collect(Collectors.toSet());
+    public TrampolineHall getByName(String name) {
+        TrampolineHall res = halls.stream().filter(h -> h.getName().equals(name)).findFirst().get();
+//        halls.stream().filter(h -> h.getName().equals(name)).collect(Collectors.toSet());
+        return res;
     }
 
     //    @PostConstruct

@@ -34,6 +34,10 @@ public class TrampolineHall  extends DomainObject {
         return name;
     }
 
+    public int getPrice() {
+        return price;
+    }
+
     public boolean orderTramp(){
         List<Trampoline> tramlins = this.tramlins.stream().filter(t -> !t.isOrdered()).collect(Collectors.toList());
         if(!tramlins.isEmpty()){
@@ -53,7 +57,7 @@ public class TrampolineHall  extends DomainObject {
                 price;
     }
 
-    private long freeTramps(){
+    public long freeTramps(){
         return tramlins.stream().filter(t -> !t.isOrdered()).count();
     }
 }

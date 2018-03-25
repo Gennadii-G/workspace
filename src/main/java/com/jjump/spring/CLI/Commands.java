@@ -50,11 +50,11 @@ public class Commands implements CommandMarker {
 
     @CliCommand(value = "order")
     public String order(@CliOption(key="hall-name", mandatory=true)String hallName){
-        Set<TrampolineHall> halls = context.getBean(TrampolineHallService.class).getByName(hallName);
-        if(halls.isEmpty()){
+        TrampolineHall hall = context.getBean(TrampolineHallService.class).getByName(hallName);
+        if(hall == null){
             return "error";
         }else{
-            return halls.iterator().next().orderTramp() ? "trampoline was ordered" : "not enough free trampolines";
+            return hall.orderTramp() ? "trampoline was ordered" : "not enough free trampolines";
         }
     }
 
@@ -76,10 +76,10 @@ public class Commands implements CommandMarker {
 
     @CliCommand(value = "show-hall")
     public String showAllHallsByName(@CliOption(key="name", mandatory=true) String name){
-        Set<TrampolineHall> halls = context.getBean(TrampolineHallService.class).getByName(name);
-        StringBuffer res = new StringBuffer();
-        halls.stream().forEach(h -> res.append(h.toString() + "\n"));
-        return res.toString();
+        TrampolineHall hall = context.getBean(TrampolineHallService.class).getByName(name);
+//        StringBuffer res = new StringBuffer();
+//        halls.stream().forEach(h -> res.append(h.toString() + "\n"));
+        return hall.toString();
     }
 
     @Autowired

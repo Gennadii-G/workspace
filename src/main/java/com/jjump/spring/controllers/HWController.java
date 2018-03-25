@@ -12,7 +12,7 @@ public class HWController {
     @RequestMapping(method = RequestMethod.GET)
     public String sayHello(ModelMap model){
         model.addAttribute("greeting", "hello, how are you?)");
-        return "anis/index";
+        return "index";
     }
     @RequestMapping(value="/helloagain", method=RequestMethod.GET)
     public String sayHelloAgain(ModelMap model){

@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class InfoHallController {
 
     public String getInformationHall(ModelMap model){
-        String info =
-        model.addAttribute("info");
+        String info = "cool";
+        model.addAttribute("info", info);
         return "infohall";
     }
 }

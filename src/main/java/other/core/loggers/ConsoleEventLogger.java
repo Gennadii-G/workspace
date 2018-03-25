@@ -1,0 +1,11 @@
+package other.core.loggers;
+
+
+import other.core.beans.Event;
+
+public class ConsoleEventLogger implements EventLogger {
+
+    public void logEvent(Event event){
+        System.out.println(event.toString());
+    }
+}
